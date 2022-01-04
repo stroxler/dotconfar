@@ -5,6 +5,7 @@
   ui = auto
 [core]
   editor = nvim
+  excludesfile = /Users/steventroxler/.gitignore_global
 [alias]
     # log graph
     lg = log --graph --abbrev-commit --decorate --date=relative\
