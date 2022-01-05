@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
-EMACS_VARIANT=runemacs
+EMACS_VARIANT=doomacs
 
 
 mkdir -p "${HOME}/.editor_logs"
 LOGFILE="${HOME}/.editor_logs/{EMACS_VARIANT}.log"
 
-export EMACSDIR="${HOME}/${EMACS_VARIANT}.d"
+export EMACSDIR="${HOME}/doom-emacs"
 
 if [ "$1" == '--gui' ]; then
   shift 1
