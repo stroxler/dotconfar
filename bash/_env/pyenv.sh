@@ -10,7 +10,7 @@ if [[ -d /usr/local/opt/zlib ]]; then
   export LDFLAGS="-L/usr/local/opt/zlib/lib"
   export CPPFLAGS="-I/usr/local/opt/zlib/include"
 fi
-if [[ -x $(which xcrun) ]]; then
+if [[ -x $(which xcrun 2> /dev/null) ]]; then
   export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 fi
 
