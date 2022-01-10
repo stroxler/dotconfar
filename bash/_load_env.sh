@@ -18,6 +18,11 @@ export PATH="${HOME}/bin:${HOME}/.local/bin:$PATH"
 # set the prompt
 GIT_PS1='\[\033[0;34m\]${debian_chroot:+($debian_chroot)}\u@\h\[\033[33m\] : \w`git-prompt`\n>\[\033[00m\] '
 NOGIT_PS1='\[\033[0;34m\]${debian_chroot:+($debian_chroot)}\u@\h\[\033[33m\] : \w\n>\[\033[00m\] '
-alias git-prompt-on='export PS1=$GIT_PS1'
-alias git-prompt-off='export PS1=$NOGIT_PS1'
+
+function git-prompt-on() {
+  export PS1=$GIT_PS1
+}
+function git-prompt-off() {
+  export PS1=$NOGIT_PS1
+}
 git-prompt-on
