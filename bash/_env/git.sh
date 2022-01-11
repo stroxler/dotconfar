@@ -51,12 +51,12 @@ function _untracked() {
         --exclude-standard --error-unmatch . >/dev/null 2>&1
 }
 
-function git-status() {
+function git-status-recursive() {
     for gitdir in `find . -name .git`;
     do
         worktree=${gitdir%/*};
-        if (! unstaged_changes $gitdir) || (! uncommited_changes $gitdir) \
-           || (untracked $gitdir = 0)
+        if (! _unstaged_changes $gitdir) || (! _uncommited_changes $gitdir) \
+           || (_untracked $gitdir = 0)
         then
             echo "=== $gitdir ==="
             git --git-dir=$gitdir --work-tree="$worktree" status -s
