@@ -5,7 +5,7 @@ EMACS_VARIANT=runemacs
 
 
 mkdir -p "${HOME}/.editor_logs"
-LOGFILE="${HOME}/.editor_logs/{EMACS_VARIANT}.log"
+LOGFILE="${HOME}/.editor_logs/${EMACS_VARIANT}.log"
 
 export EMACSDIR="${HOME}/${EMACS_VARIANT}.d"
 
