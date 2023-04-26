@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Launcher for chemacs-based emacs in the terminal.
+#
+# You may in some cases need to export some value for $TERM to get
+# good colors; I've had good luck with `export TERM=xterm-direct` in
+# cases where it didn't work by default.
+
+# Allow using -p instead of --with-profile for convenience
+PROFILE_ARGS=()
+while getopts 'p:h' OPTCHAR; do
+  case "$OPTCHAR" in
+    p)
+      PROFILE_ARGS[${#PROFILE_ARGS[@]}]="--with-profile"
+      PROFILE_ARGS[${#PROFILE_ARGS[@]}]="$OPTARG"
+      ;;
+    ?|h)
+      echo "Usage: $(basename $0) [-p PROFILE] ...EMACS_ARGUMENTS"
+      exit 1
+      ;;
+  esac
+done
+shift "$(($OPTIND -1))"
+
+emacs -nw "${PROFILE_ARGS[@]}" "$@"

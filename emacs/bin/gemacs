@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Launcher for chemacs-based emacs in a gui (intended only for
+# desktop work)
+
+set -e
+
+# Allow using -p instead of --with-profile for convenience
+PROFILE_ARGS=()
+while getopts 'p:h' OPTCHAR; do
+    case "$OPTCHAR" in
+        p)
+            PROFILE_ARGS[${#PROFILE_ARGS[@]}]="--with-profile"
+            PROFILE_ARGS[${#PROFILE_ARGS[@]}]="$OPTARG"
+            ;;
+        ?|h)
+            echo "Usage: $(basename $0) [-p PROFILE] ...EMACS_ARGUMENTS"
+            exit 1
+            ;;
+    esac
+done
+shift "$(($OPTIND -1))"
+
+mkdir -p "${HOME}/.editor_logs"
+LOGFILE="${HOME}/.editor_logs/gemacs-$(date -Iseconds).log"
+echo "Logs will go to ${LOGFILE}"
+
+echo "NOTE: gemacs can accept file arguments, but only if they are "
+echo "      either absolute or relative to your HOME directory"
+
+nohup emacs "${PROFILE_ARGS[@]}" "$@" </dev/null >"${LOGFILE}" 2>&1 &
