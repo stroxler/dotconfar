@@ -14,6 +14,9 @@ if [[ -x $(which xcrun 2> /dev/null) ]]; then
   export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 fi
 
+# Don't let pyenv mess with the prompt, that confuses starship.rs
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
