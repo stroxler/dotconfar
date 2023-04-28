@@ -22,4 +22,8 @@ while getopts 'p:h' OPTCHAR; do
 done
 shift "$(($OPTIND -1))"
 
-emacs -nw "${PROFILE_ARGS[@]}" "$@"
+# The `--user ''` seems to be needed on some linux servers, and it
+# does not appear to hurt on macos so I use it unconditionally for
+# terminal emacs.
+
+emacs -nw --user '' "${PROFILE_ARGS[@]}" "$@"
