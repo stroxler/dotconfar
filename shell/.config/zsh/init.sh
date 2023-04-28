@@ -9,6 +9,8 @@ else
 		zgen oh-my-zsh plugins/git
 		zgen oh-my-zsh plugins/command-not-found
 		zgen load zsh-users/zsh-syntax-highlighting
+		zgen load zsh-users/zsh-completions
+		zgen load zsh-users/zsh-autosuggestions
 
 		## An advantage of zgen is I can also use prezto if I want:
 		# zgen prezto
