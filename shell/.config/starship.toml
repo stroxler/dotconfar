@@ -4,6 +4,7 @@ format = """
 $username\
 $hostname\
 $directory\
+$env_var\
 $shell\
 $git_branch\
 $git_status\
@@ -36,8 +37,11 @@ show_milliseconds = true
 style = 'green'
 format = '[took $duration]($style)'
 
-
 [character]
 success_symbol = '[>](blue)'
 error_symbol = '[x](red)'
 
+[env_var.TMUX_PANE]
+variable = 'TMUX_PANE'
+default = ''
+format = '[\[tmux:$env_value\] ](green)'
