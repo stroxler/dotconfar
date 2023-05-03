@@ -44,4 +44,4 @@ error_symbol = '[x](red)'
 [env_var.TMUX_PANE]
 variable = 'TMUX_PANE'
 default = ''
-format = '[\[$env_value\]](green)'
+format = '[\[$env_value\]](green) '
