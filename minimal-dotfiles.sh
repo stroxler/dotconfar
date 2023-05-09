@@ -22,9 +22,9 @@ INPUTRC_EOF
 
 
 
-### .bashrc ###
+### .bash_profile ###
 
-cat >> ~/.bashrc <<\BASHRC_EOF
+cat >> ~/.bash_profile <<\BASH_PROFILE_EOF
 
 # basic prompt support since I don't have starship
 export PS1='\[\033[0;34m\]${debian_chroot:+($debian_chroot)}$(hostname)\[\033[33m\] : \w\n>\[\033[00m\] '
@@ -34,7 +34,7 @@ export EDITOR="nvim --clean '+source ~/.config/nvim/init.vim'"
 alias nvim="nvim --clean '+source ~/.config/nvim/init.vim'"
 alias v="nvim --clean '+source ~/.config/nvim/init.vim'"
 
-BASHRC_EOF
+BASH_PROFILE_EOF
 
 
 
