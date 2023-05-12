@@ -35,6 +35,9 @@ return {
     "nordtheme/vim",
   },
   {
+    "talha-akram/noctis.nvim"
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "stellarized",
@@ -43,7 +46,15 @@ return {
 }
 ```
 
-These are probably the color themes I'd want regardless - in particular
-I think the `solarized8_low` and `stellarized` themes are really nice, and
-they aren't available for terminal or emacs which makes them particularly
-good choices for neovim (since I like to use different themes everywhere).
+These are probably the color themes I'd want regardless - in particular I think
+the `solarized8_low`, `everforest`, and `stellarized` themes are really nice,
+and they aren't available for terminal or emacs which makes them particularly
+good choices for neovim.
+
+The noctis themes are also quite nice, the colors are the same as in vscode but
+the actual expression on code is pretty different due to different syntax ->
+color rules (this is the same reason why I usually like solarized and zenburn
+more in emacs than vim, even though the actual pallet is identical).
+
+Stllrzd is nice but I think I prefer stellarized, especially since stllrzd is
+available in iterm. And nord and gruvbox are available everywhere.
