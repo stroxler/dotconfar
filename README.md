@@ -13,3 +13,7 @@ This whole setup is pretty janky, it works for me but I wouldn't recommend
 it; there are tools that can do similar things managing state more clearly
 (in particular, I'm hoping to eventually investigate nix which I believe
 can be leveraged for managing dotfiles).
+
+# Layout
+
+It's split out loosely by tool - e.g. shell vs editor.
