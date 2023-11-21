@@ -22,8 +22,18 @@
     guitool = kdiff3
 [difftool "kdiff3"]
     trustExitCode = false
+
 # circleci local adds this automatically, but it causes
 # some issues with cargo
 #
 #[url "git@github.com:"]
 #	insteadOf = https://github.com/
+
+# Some proxy config is useful for me on some machines
+# [http]
+# 	proxy = https://fwdproxy:8082
+# 	proxySSLCert = /var/facebook/credentials/stroxler/x509/stroxler.pem
+# 	proxySSLKey = /var/facebook/credentials/stroxler/x509/stroxler.pem
+# 
+# [credential]
+#	helper = cache --timeout=31536000
