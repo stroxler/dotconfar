@@ -17,3 +17,7 @@ can be leveraged for managing dotfiles).
 # Layout
 
 It's split out loosely by tool - e.g. shell vs editor.
+
+I've also got some markdown notes in `notes` about various setups that I
+haven't yet translated into my dotconfar; for example my neovim config
+is not currently confar-managed.
