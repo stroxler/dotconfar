@@ -48,3 +48,9 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+
+;; Additional packages ===============
+
+;; opam-switch-mode allows taureg to find the opam mode
+(package! opam-switch-mode)
