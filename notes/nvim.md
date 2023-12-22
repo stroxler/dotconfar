@@ -9,8 +9,10 @@ defaults to using `<Enter>` which drives me nuts.
 
 Just noting the fix for this here:
 
-I injected the following code into `.config/nvim/lua/plugins/cmp.lua/`:
+I injected an override of the default lazyvim completion into
+`~/.config/nvim/lua/plugins/cmp.lua`:
 ```lua
+CAT > ~/.config/nvim/lua/plugins/cmp.lua <<\EOF_CMP
 -- This is the default config listed at
 -- https://www.lazyvim.org/plugins/coding#nvim-cmp (as of Nov 1 2023),
 -- except that I've changed the confirm to <Tab>
@@ -86,7 +88,10 @@ return {
     require("cmp").setup(opts)
   end,
 }
+EOF_CMP
 ```
+
+You can 
 
 
 # Older notes on neovim
