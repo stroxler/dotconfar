@@ -21,3 +21,9 @@ It's split out loosely by tool - e.g. shell vs editor.
 I've also got some markdown notes in `notes` about various setups that I
 haven't yet translated into my dotconfar; for example my neovim config
 is not currently confar-managed.
+
+# Deprecation in process
+
+I've started moving config to a new setup in my `ape-nix` repository,
+so this repo is gradually becoming out of date; at the moment the
+emacs config is still valid.
