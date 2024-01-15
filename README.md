@@ -1,6 +1,6 @@
 # My dotconfar
 
-## Migration in process
+## Migration of my config to a new repo is process
 
 I've started moving config to a new setup in my `ape-nix` repository,
 so this repo is gradually becoming out of date; at the moment the
